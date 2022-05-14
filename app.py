@@ -66,8 +66,6 @@ def sign_in():
 
 @app.route("/movie", methods=["POST"])
 def movie_post():
-    #얘는 form에서 넘겨받은 값
-    #주의 여기서 genre_receive는 숫자를 받아옵니다! 별처럼!(별도 숫자로 받아서 별모양을 숫자만큼 반복후 넣어줬죵?)
     url_receive = request.form['url_give']
     star_receive = request.form['star_give']
     commnet_receive = request.form['comment_give']
@@ -79,15 +77,12 @@ def movie_post():
 
     soup = BeautifulSoup(data.text, 'html.parser')
 
-    #얘는 크롤링에서 넘겨주는 값
-    #여기에 진짜 genre 값이 들어가요  string 로맨스, 스릴러 ..
+    #크롤링에서 넘겨주는 값
     title = soup.select_one('meta[property="og:title"]')['content']
     image = soup.select_one('meta[property="og:image"]')['content']
     desc = soup.select_one('meta[property="og:description"]')['content']
     genre = soup.select_one('#content > div.article > div.mv_info_area > div.mv_info > dl > dd:nth-child(2) > p > span:nth-child(1) > a:nth-child(1)').text
 
-    #결론적으로 genre에는 진짜 장르 한글(크롤링한거), genre_num은 섹션별로 리스팅해주는 용도,.?
-    #아무래도 포스팅할 때 목록별 출력에 새로운 데이터는 안들어가는 거 같고 미리 db에 섹션별로 넣어두고 그걸 표시하는 거 같아요
     doc = {
         'title': title,
         'image': image,
@@ -225,7 +220,7 @@ def update_like():
     except (jwt.ExpiredSignatureError, jwt.exceptions.DecodeError):
         return redirect(url_for("home"))
 
-# 각 카테고리마다 그 계절의 조건에 맞는 데이터 가져가서 리스팅
+# 각 카테고리마다 그 장르의 조건에 맞는 데이터 가져가서 리스팅
 #1번 - 스릴 리스트
 @app.route("/index/movie/thrill", methods=["GET"])
 def thill_get_1():

@@ -113,6 +113,9 @@
 
                         let star_image = '⭐'.repeat(star)
 
+                        {##템프의 card-text과 mycomment 부분 내용물을 둘이 바꿔서 넣어주었습니다.#}
+                        {#부트스트랩 CSS모양이 다르게 적용되는데 card-text부분이 #}
+                        {#시각적으로 더 잘보여서 내용물만 바꿔놨습니다.#}
                         let temp_html = `<div class="col">
                                             <div class="card h-100">
                                                 <img src="${image}"
@@ -120,9 +123,9 @@
                                                 <div class="card-body">
                                                     <h5 class="card-title">${title}</h5>
                                                     <p>${genre}</p>
-                                                    <p class="card-text">${desc}</p>
+                                                    <p class="card-text">${comment}</p>
                                                     <p>${star_image}</p>
-                                                    <p class="mycomment">${comment}</p>
+                                                    <p class="mycomment">${desc}</p>
                                                 </div>
                                             </div>
                                         </div>`
@@ -134,7 +137,7 @@
                 }
             })
         }
-
+        {##영화 등록하는 기능#}
         function posting() {
             let url = $('#url').val();
             let star = $('#star').val();
@@ -165,9 +168,7 @@
             window.location.href = '/login'
         }
 
-           {#1번 카테고리(스릴러) 영화를 찾아서 보여주는 함수 #}
-        {#얘를 만들어놓은 카테고리 버튼에 알맞게 onclick으로 연결해주시면 됩니다 e.g) button onclick='listing_2()'#}
-        {#url이 알맞게 들어갔는지 확인해주세요#}
+        {#1번 카테고리(스릴러) 영화를 찾아서 보여주는 함수 #}
         function listing_1() {
              $('#cards-box').empty();
             $.ajax({
@@ -196,7 +197,7 @@
                                                     <h5 class="card-title">${title}</h5>
                                                     <p class="card-text">${comment}</p>
                                                     <p>${star_image}</p>
-                                                    <p class="mycomment">${desc}, 장르:${genre}</p>
+                                                    <p class="mycomment">${desc}</p>
                                                 </div>
                                             </div>
                                         </div>`
@@ -237,7 +238,7 @@
                                                     <h5 class="card-title">${title}</h5>
                                                     <p class="card-text">${comment}</p>
                                                     <p>${star_image}</p>
-                                                    <p class="mycomment">${desc}, 장르:${genre}</p>
+                                                    <p class="mycomment">${desc}</p>
                                                 </div>
                                             </div>
                                         </div>`
@@ -278,7 +279,7 @@
                                                     <h5 class="card-title">${title}</h5>
                                                     <p class="card-text">${comment}</p>
                                                     <p>${star_image}</p>
-                                                    <p class="mycomment">${desc}, 장르:${genre}</p>
+                                                    <p class="mycomment">${desc}</p>
                                                 </div>
                                             </div>
                                         </div>`
@@ -311,7 +312,7 @@
 
                         let star_image = '⭐'.repeat(star)
 
-                        {##내부 형식은 원하는 대로 변경해주시면 돼요#}
+
                         let temp_html = `<div class="col">
                                             <div class="card h-100">
                                                 <img src="${image}" class="card-img-top" style="width:280px;height:400px;">
@@ -319,7 +320,7 @@
                                                     <h5 class="card-title">${title}</h5>
                                                     <p class="card-text">${comment}</p>
                                                     <p>${star_image}</p>
-                                                    <p class="mycomment">${desc}, 장르:${genre}</p>
+                                                    <p class="mycomment">${desc}</p>
                                                 </div>
                                             </div>
                                         </div>`
@@ -360,7 +361,7 @@
                                                     <h5 class="card-title">${title}</h5>
                                                     <p class="card-text">${comment}</p>
                                                     <p>${star_image}</p>
-                                                    <p class="mycomment">${desc}, 장르:${genre}</p>
+                                                    <p class="mycomment">${desc}</p>
                                                 </div>
                                             </div>
                                         </div>`
