@@ -1,14 +1,19 @@
 # mini-project-team7
 항해 미니 프로젝트 7조: 영화 어때? 
 
+<img src="https://user-images.githubusercontent.com/86911858/190612117-4dca05f9-dacd-4730-a9c0-64ba1bf75a47.JPG" width="500" height="300">
 
 ## ✅ 미니 프로젝트 소개 
-간단한 영화 정보와 함께 감상평을 남길 수 있는 정보 공유 사이트
-내가 좋아하는 영화의 기록을 남겨보고 카테고리 별로 구분해서 편하게 보자! [영화 어때?](http://study-jh.shop/)
+간단한 영화 정보와 함께 감상평을 남길 수 있는 정보 공유 사이트  
+내가 좋아하는 영화의 기록을 남겨보고 카테고리 별로 구분해서 편하게 보자! 
+
+
+시연영상 주소: https://www.youtube.com/watch?v=kNpy3XscrGQ
+
 
 
 ## 🤠 팀원
- - 조원희
+ - 조원희(팀장)
  - 이기정
  - 안재훈
  - 이민석
